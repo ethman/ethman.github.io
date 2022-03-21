@@ -1,30 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Ethan Manilow</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <style>
         body {
             font-family: 'Cutive Mono', 'Courier New', monospace;
             text-align: justify;
-        }
-        @media only screen and (max-width: 500px) {
-            div#wrapper {}
-        }
-
-        @media only screen and (min-width: 500px) {
-            div#wrapper {
-                width: 500px;
-                margin: auto;
-            }
-        }
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            background-color: rgba(0, 0, 0, 0.05);
         }
         a:link, a:visited {
             text-decoration: none;
@@ -32,192 +18,110 @@
         }
         a:hover, a:active {
             text-decoration: underline;
+            font-weight: bold;
         }
-        .content {
-            display: none;
-            /*margin-left: 8%;*/
-        }
-        ul {
-            margin: 0;
-            list-style-type: none;
-        }
-        ul li {
-            margin: 2% 0;
-        }
-        .description {
-            margin-left: 5%;
-        }
-        .info {
-            display: flex;
-            justify-content: space-between;
+        .links {
+            list-style: none;
+            padding: 0;
         }
 
-        .tid-bit {
-            margin-left: 20%;
-            margin-top: 5px;
+        .links li {
+            display: inline;
         }
+
+        .newsdate {
+            padding: 0;
+        }
+
     </style>
-
 </head>
-
 <body>
 
-<div>
-    <br />
-    <div>
-        <img src="head.jpg" alt="Ethan's head" height="200" width="200">
-        <div id="wrapper">
+<br />
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 col-md-4" style="text-align: center;" >
+<!--             style="background-color:lavender; text-align: center;"-->
+
+            <img src="headshot_2021_square_sm.png" style="border-radius: 50%; margin-top: 50px;" alt="Ethan's head" height="300" width="300">
+        </div>
+        <div class="col-12 col-md-7" >
+<!--             style="background-color:lavenderblush;"-->
+            <h1>Ethan Manilow</h1>
+            <ul class="links">
+                <li><a href="https://twitter.com/ethanmanilow">Twitter</a> </li> <li>|</li>
+                <li><a href="https://scholar.google.com/citations?user=2A80yVkAAAAJ">Google Scholar</a> </li> <li>|</li>
+                <li><a href="https://github.com/ethman">Github</a> </li> <li>|</li>
+                <li><a href="https://ethman.github.io/manilowethan_cv.pdf">CV</a> </li> <li>|</li>
+                <li><a href="https://www.linkedin.com/in/ethan-m-8939645a">LinkedIn</a> </li>
+            </ul>
             <br />
             <p>
-                Ethan Manilow is a final year PhD Candidate studying Computer Science working under
+                I am a final-year PhD Candidate studying Computer Science working under
                 <a href="https://bryan-pardo.github.io/">Bryan Pardo</a> in the
                 <a href="http://interactiveaudiolab.github.io/">Interactive Audio Lab</a> at
                 <a href="http://northwestern.edu/">Northwestern University</a>.
-                He currently works part time as a Student Researcher at
-                <a href="https://research.google/teams/brain/">Google Brain</a> on the 
-                <a href="https://magenta.tensorflow.org/">Magenta Team</a> after a research
-                internship with them in the summer of 2020.
-                Prior to that, he was a research intern at <a href="https://www.merl.com/">MERL</a> on the 
+                I currently work part time as a Student Researcher at
+                <a href="https://research.google/teams/brain/">Google Brain</a> on the
+                <a href="https://magenta.tensorflow.org/">Magenta Team</a>.
+                Prior to that, I was a research intern at <a href="https://www.merl.com/">MERL</a> on the
                 <a href="https://www.merl.com/research/speech-audio"> Speech and Audio Team</a>.
-                
-            </p>
-            
-            <p>
-                He currently lives in Chicago, where he spends his free time fingerpicking his acoustic guitar
-                and smiling at dogs he passes on the sidewalk.
+                My research centers on making machine learning systems that listen to and understand musical audio
+                in an effort to make better tools that can assist artists.
+
             </p>
 
-            <br/>
-            <div>
-                <div>
-                    <span class="carrot"> >>> </span>
-                    <a href="#" class="category">Projects</a>
-                    <div class="content">
-                        <ul>
-                            <li>
-                                <div class="info">
-                                    <span><b>Bespoke Score-Informed Nets</b></span>
-                                    <span><b>2020</b></span>
-                                </div>
-                                <div class="description">
-                                    Purpose-built neural networks that separate sources in a mix
-                                    by synthesizing their own training data.
-                                    <a href="https://ethman.github.io/bespoke-demo">[demo]</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="info">
-                                    <span><b>audioLIME</b></span>
-                                    <span><b>2020</b></span>
-                                </div>
-                                <div class="description">
-                                    Listenable explanations of black-box audio models using sources
-                                    as interpretable components. (With Verena Haunschmid)
-                                    <a href="https://github.com/CPJKU/audioLIME">[code]</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="info">
-                                    <span><b>Cerberus</b></span>
-                                    <span><b>2020</b></span>
-                                </div>
-                                <div class="description">
-                                    Neural network to isolate instruments in a musical mix and 
-                                    simultaneously transcribe the notes of each instrument.
-                                    <a href="https://interactiveaudiolab.github.io/demos/cerberus">[demo]</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="info">
-                                    <span><b>Slakh2100</b></span>
-                                    <span><b>2019</b></span>
-                                </div>
-                                <div class="description">
-                                    Dataset for music source separation with 145 hours of mixtures,
-                                    isolated sources, and MIDI.
-                                    <a href="http://www.slakh.com">[website]</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="info">
-                                    <span><b>WHAM!</b></span>
-                                    <span><b>2019</b></span>
-                                </div>
-                                <div class="description">
-                                    Dataset of nonstationary background noise for speech separation.
-                                    <a href="http://wham.whisper.ai/">[website]</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="info">
-                                    <span><b>SDR Prediction</b></span>
-                                    <span><b>2017</b></span>
-                                </div>
-                                <div class="description">
-                                    Predicting source separation evaluation metrics without ground truth.
-                                    <a href="https://interactiveaudiolab.github.io/demos/multicue.html">[demo]</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="info">
-                                    <span><b>nussl</b></span>
-                                    <span><b>2015 - Now</b></span>
-                                </div>
-                                <div class="description">
-                                    A python audio source separation library with implementation of
-                                    many popular algorithms.
-                                    <a href="https://github.com/interactiveaudiolab/nussl">[github]</a>
-                                    <a href="https://interactiveaudiolab.github.io/nussl/">[docs]</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="info">
-                                    <span><b>SampSyn</b></span>
-                                    <span><b>2012</b></span>
-                                </div>
-                                <div class="description">
-                                    <a href="https://github.com/ethman/SampSyn">[github]</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+            <p>
+                I currently live in Chicago, where I spend my free time fingerpicking my acoustic guitar
+                and smiling at dogs I pass on the sidewalk.
+                You can email me at <b>ethan m</b> [at] <b>u</b> [dot] <b>northwestern</b> [dot] <b>edu</b>.
+            </p>
+            <br />
+
+            <h3>News</h3>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-2 newsdate"><b>May 2022</b></div>
+                    <div class="col-sm-10">I will be presenting two papers to ICASSP '22.</div>
                 </div>
-                <div>
-                    <span> >>> </span>
-                    <a href="https://scholar.google.com/citations?user=2A80yVkAAAAJ">Publications</a>
+                <div class="row">
+                    <div class="col-sm-2 newsdate"><b>Apr 2022</b></div>
+                    <div class="col-sm-10">One Oral (<a href="http://g.co/magenta/midi-ddsp">MIDI-DDSP</a>) and one Spotlight (<a href="g.co/magenta/mt3">MT3</a>) at ICLR '22!</div>
                 </div>
-                <div>
-                    <span> >>> </span>
-                    <a href="https://ethman.github.io/manilowethan_cv.pdf">
-                        CV [pdf]
-                    </a>
+                <div class="row">
+                    <div class="col-sm-2 newsdate"><b>Mar 2022</b></div>
+                    <div class="col-sm-10">I am speaking at the <a href="https://www.meetup.com/London-Audio-and-Music-AI-Meetup/events/284525214/">London Audio & Music AI Meetup</a>.</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2 newsdate"><b>Mar 2022</b></div>
+                    <div class="col-sm-10">I am speaking to the <a href="https://excitingtimes.github.io/">Music+AI Reading Group at MILA x Vector Institute</a>.</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2 newsdate"><b>Dec 2021</b></div>
+                    <div class="col-sm-10"><a href="http://g.co/magenta/midi-ddsp">MIDI-DDSP</a> wins Outstanding Paper at <a href="https://ctrlgenworkshop.github.io/accepted_papers.html#outstanding-papers">NeurIPS CtrlGen Workshop</a>!</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2 newsdate"><b>Dec 2021</b></div>
+                    <div class="col-sm-10"><a href="https://arxiv.org/pdf/2110.13323.pdf">Deep Learning in Audacity</a> published at <a href="https://neuripscreativityworkshop.github.io/2021/">NeurIPS Creativity Workshop</a>.</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2 newsdate"><b>Nov 2021</b></div>
+                    <div class="col-sm-10"><a href="https://archives.ismir.net/ismir2021/paper/000027.pdf">Hierarchical Instrument Recognition</a> wins Best Paper at ISMIR 2021!</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2 newsdate"><b>Nov 2021</b></div>
+                    <div class="col-sm-10">I will be conducting a tutorial at ISMIR 2021!</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2 newsdate"><b>Nov 2021</b></div>
+                    <div class="col-sm-10">Two papers published at ISMIR 2021!</div>
                 </div>
             </div>
-
-            <br/>
-            <p>
-                Sometimes he goes <a href="https://twitter.com/ethanmanilow">on Twitter</a>.
-                His email address is his first and last name at Google's email service.
-            </p>
         </div>
+
     </div>
 </div>
-
-<script>
-$('.category').click(function (e) {
-    e.preventDefault();
-    let right = ' >>> ', down = ' VVV ';
-
-    if( $(this).siblings('.carrot').text() === right ) {
-        $(this).siblings('.carrot').text(down)
-    } else {
-        $(this).siblings('.carrot').text(right)
-    }
-    $(this).siblings('.content').toggle();
-
-});
-
-</script>
 
 </body>
 </html>
